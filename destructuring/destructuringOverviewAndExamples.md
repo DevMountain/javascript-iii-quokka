@@ -59,7 +59,8 @@ function isOldEnough(person){
     var {age, eyeColor} = person;
 }
 
-isOldEnough({name: "Higel", age: 20, eyeColor: 'brown'})
+var obj = {name: "Higel", age: 20, eyeColor: 'brown'}
+isOldEnough(obj)
 ```
 
 ##### in an import statement
