@@ -72,7 +72,7 @@ A higher order function gets and uses other functions to perform *parts*.
 `array.map( function(item){ return item + ", eh"})`
 
 `array.map( function(item){ return item + 27})`
-```
+```js
 array.map( function(item){ 
     if(item.isDemoted){
       item.isAdmin = false;

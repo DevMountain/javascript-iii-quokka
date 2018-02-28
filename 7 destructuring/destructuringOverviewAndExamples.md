@@ -4,7 +4,7 @@
 
 #### move the property name(s) from the dot notation on the right into the curly braces on the left
 
-```
+```js
 var name = employee.first_name;
 //becomes
 var {first_name} = employee
@@ -12,7 +12,7 @@ var {first_name} = employee
 
 ##### can get multiple variables
 
-```
+```js
 var { first_name
     , last_name
     , age
@@ -23,7 +23,7 @@ var { first_name
 
 ##### variable names must match
 
-``` 
+``` js
 var object = {
     x: 7,
     y: 8
@@ -46,7 +46,7 @@ var { newX } = object;
 
 ##### in function parameters
 
-```
+```js
 function isOldEnough({age}){}
 
 isOldEnough({name: "Higel", age: 20, eyeColor: 'brown'})
@@ -54,7 +54,7 @@ isOldEnough({name: "Higel", age: 20, eyeColor: 'brown'})
 
 ##### in a function
 
-```
+```js
 function isOldEnough(person){
     var {age, eyeColor} = person;
 }

@@ -8,18 +8,18 @@
 
 #### Object.assign copies from the right to the left and returns the final copy
 
-```
+```js
 Object.assign( { age: 27 }, { name: "Myself"}) 
 -> returns 
 { age: 7, name: "Myself"}
 ```
 
 ###### correct syntax
-```
+```js
 var result = Object.assign( { age: 27 }, { name: "Myself"}) 
 ```
 
 ###### Can copy multiple times 
-```
+```js
 var result = Object.assign( { age: 27 }, { name: "Myself"}, { color: "Red"}, { food: "Wings" }) 
 ```

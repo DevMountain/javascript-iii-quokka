@@ -18,7 +18,7 @@
 
 ### Are used to loop over all of the keys of an object
 
-```
+```js
 var obj = {
     x: 7,
     y: 2,
@@ -33,7 +33,7 @@ for(var key in obj){
 
 ### Commonly paired with square bracket notation to access the object
 
-```
+```js
 for(var key in obj){
     var value = obj[key]; //key is a string representing each object 1 at a time
 
