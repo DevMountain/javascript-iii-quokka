@@ -16,6 +16,21 @@
 #### can start later
 `array.indexOf(10, 3)` -> Returns the index of 10, but only starts looking at index 3.
 
+var ar1 = [3,5,6,2,2,5,4,3,2,2,62,5]
+var first = ar1.indexOf(2) //3
+
+```
+var nextIdx = 0
+var all2s = []
+while(nextIdx >= 0){
+  var idx = ar1.indexOf(2, nextIdx);
+  if(idx >= 0){
+    all2s.push(idx)
+    nextIdx = idx + 1
+  }
+}
+```
+
 ### split
 
 #### breaks a string based on a character
@@ -26,6 +41,8 @@
 
 #### returns an array with each chunk as a new item
 `var splitArr = "hello, my, name, is, Jeremy".split(',')`
+
+var splitArr = `${greeting}, my, name, is, Jeremy`.split(',')
 
 `splitArr === ["hello", " my", " name", " is", " Jeremy"]`
 
@@ -137,6 +154,10 @@ array.map( function(item){
 
 `array.reduce( ( prev, item, index, arr) => { }, startingValue )`
 
+var arry = [3,5,2]
+arry.reduce((prev, next) => {}) //First call : prev = 3, next = 5
+arry.reduce((prev,next)=> {}, 10) //First call : prev= 0, next = 3
+
 ##### prev is whatever value the previous invocation returned
 
 `array.reduce( function( prev, item, index, arr) { return prev + next }, 0 )`
@@ -154,3 +175,10 @@ array.map( function(item){
 `reduceResult === 28` 
 
 `array === [1, 2, 4, 10, 11]`
+
+
+
+var str = "Your poopy face smells like chihuha"
+var badWords = ["poopy", "chihuha"]
+
+var filtered = badWords.reduce((prev, item)=> prev.replace(item, "gumdrops"), str)

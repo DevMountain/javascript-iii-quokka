@@ -11,7 +11,7 @@
 ```js
 Object.assign( { age: 27 }, { name: "Myself"}) 
 -> returns 
-{ age: 7, name: "Myself"}
+{ age: 27, name: "Myself"}
 ```
 
 ###### correct syntax

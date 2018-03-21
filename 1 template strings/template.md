@@ -9,6 +9,8 @@ let lastName = "Doe";
 let fullName = firstName + " " + Last Name
 ```
 
+"Jane said, \"Hello Dave, I missed you\" "
+
 fullName would contain 'Jane Doe'
 
 We can do the same thing with a template string instead.

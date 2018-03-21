@@ -5,7 +5,7 @@
 #### move the property name(s) from the dot notation on the right into the curly braces on the left
 
 ```js
-var name = employee.first_name;
+var first_name = employee.first_name;
 //becomes
 var {first_name} = employee
 ```
@@ -14,12 +14,18 @@ var {first_name} = employee
 
 ```js
 var { first_name
-    , last_name
     , age
     , city
+    , last_name
     , state
     } = person;
 ```
+
+var first_name = employee.first_name;
+var last_name = employee.last_name;
+var age = employee.age;
+var city = employee.city;
+var state = employee.state;
 
 ##### variable names must match
 
@@ -45,6 +51,15 @@ var { newX } = object;
 `let { age } = person;`
 
 ##### in function parameters
+
+
+function isOldEnough({age}){
+    <!-- name === undefined -->
+    <!-- age === 17 -->
+}
+
+var person = {name: 'Bigel', age: 17};
+isOldEnough(person)
 
 ```js
 function isOldEnough({age}){}

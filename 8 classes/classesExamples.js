@@ -1,11 +1,11 @@
 
-class Animal{
-    constructor(sound, species){
+class Animal {
+    constructor(sound, species) {
         this.sound = sound;
         this.species = species;
     }
 
-    makeSound(){
+    makeSound() {
         return "The " + this.species + " says " + this.sound
     }
 }
@@ -22,17 +22,17 @@ var lionSound = lenny.makeSound();
 lionSound;
 
 
-class BankAccount{
-    constructor(accountNum, startingAmount){
+class BankAccount {
+    constructor(accountNum, startingAmount) {
         this.balance = startingAmount;
         this.accountNum = accountNum;
     }
 
-    withdraw(amount){
+    withdraw(amount) {
         this.balance -= amount;
     }
 
-    deposit(amount){
+    deposit(amount) {
         this.balance += amount;
     }
 }
@@ -53,21 +53,33 @@ karynsAccount
 marconesAccount
 
 
-class Movie{
-    constructor(title, year, director){
+class Movie {
+    constructor(title, year, director) {
         this.title = title;
         this.year = year;
         this.director = director;
         this.ratings = []
     }
 
-    addRating(score){
+    addRating(score) {
         this.ratings.push(score)
     }
 
-    averageRating(){
+    averageRating() {
         var sum = this.ratings.reduce((sum, next) => sum + next)
         return sum / this.ratings.length;
+    }
+}
+var boj = {
+    title: "HarryPotter",
+    year: 1998,
+    director: "J.K.",
+    ratings =[],
+    addRating: function (score) {
+        this.ratings.push(score)
+    },
+    averageRating: function () {
+        return avg;
     }
 }
 
@@ -77,3 +89,10 @@ harryPotter.addRating(5)
 harryPotter.addRating(3)
 var avg = harryPotter.averageRating()
 avg;
+
+var lordOfTheRings = new Movie("Lord of the Rings", 2002, "Tolkein")
+lordOfTheRings.addRating(5);
+lordOfTheRings.addRating(5);
+lordOfTheRings.addRating(1);
+let avg2 = lordOfTheRings.averageRating();
+avg2;
