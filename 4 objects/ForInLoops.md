@@ -39,4 +39,5 @@ for(var key in obj){
 
     obj[key] = newValue; //square bracket is also used to assign
 }
+
 ```
